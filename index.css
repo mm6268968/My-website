@@ -1,0 +1,467 @@
+*{
+padding: 0;
+margin: 0;
+text-decoration: none;
+list-style: none;
+box-sizing: border-box;
+
+}
+html{
+    scroll-behavior: smooth;
+}
+.nav{
+
+background-color: black;
+color: white;
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 10px 6%;
+position: sticky;
+top: 0;
+z-index: 10000;
+}
+.nav h1{
+font-size: 50px;
+
+}
+.nav h1 span{
+    color: gold;
+}
+.nav ul{
+display: flex;
+gap: 15px;
+font-size: 20px;
+
+}
+.nav ul li a{
+color: white;
+position: relative;
+transition: 0.3s;  
+
+
+}
+.nav ul li a::after{
+    content:"" ;
+    position: absolute;
+    width: 0;
+    bottom: -8px;
+    height: 3px;
+    right: 0;
+    background-color: gold;
+    transition: 0.4s;
+}
+.nav ul li a:hover::after{
+width: 100%;
+
+}
+.nav ul li a:hover{
+    font-size: 30px;
+    color: gold;
+}
+.hero{
+    background: linear-gradient(gray,black);
+   height: 92vh;
+   padding:80px 6%;
+  display: flex;
+  align-items: center;
+  color: white;
+}
+.hero-content{
+    max-width: 750px;
+ 
+}
+.small-title{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+    ;
+    font-size: 20px;
+
+}
+.hero h1{
+margin-top: 15px;
+font-size: 50px;
+
+}
+.hero h1 span{
+    color: gold;
+}
+.hero p{
+    margin-top: 20px;
+    font-size: 20px;
+}
+.hero-btn {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+.main-btn,.outline-btn{
+    padding: 14px 10%;
+    border-radius: 10px;
+    font-size: 25px;
+    transition: 0.4s;
+}
+.main-btn{
+    color: black;
+    background-color: gold;
+}
+.main-btn:hover{
+    background-color: white;
+}
+.outline-btn{
+    color:gold;
+   border: solid gold 1px ;
+}
+.outline-btn:hover{
+    color: white;
+}
+
+.about{
+    padding: 50px 8%;
+  
+ 
+
+}
+
+.about-text{
+  text-align: center;
+}
+.about-text p{
+    color: gold;
+    text-align: center;
+    font-size: 20px;
+}
+.about-text h1{
+
+position: relative;
+padding-bottom: 5px ;
+
+
+}
+.about-text h1::after{
+    content: "";
+    position: absolute;
+   
+    width:70px;
+ 
+    bottom: 0;
+    height: 5px;
+    left:45%;
+  
+   background-color: gold;
+   
+
+}
+.about-box{
+    display: grid;
+    grid-template-columns: repeat(3,auto);
+    grid-template-rows: 100px 100px 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    
+}
+.about-box div{
+
+
+box-shadow: 4px 4px 4px gray;
+padding: 2px 2px;
+transition: 0.5s;
+}
+.about-box h1{
+    color: gold;
+    text-align: center;
+}
+.about-box div:hover{
+    transform: translateY(-7px);
+}
+.service{
+    padding: 50px 8%;
+    background-color: whitesmoke;
+width:100%;
+height:400px;
+}
+.service-text{
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+}
+.service-text p{
+    color: gold;
+    font-size: 15px;
+
+}
+.service-text h1{
+    position: relative;
+    padding-bottom: 5px;
+}
+.service-text h1::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    background-color: gold;
+    width: 70px;
+    height: 5px;
+    left: 45%;
+
+}
+.service-box{
+    display: flex;
+    gap: 20px;
+    padding-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(3,auto);
+    grid-template-rows: repeat(3,100px);
+}
+.service-box div{
+
+    transition: 0.5s;
+    box-shadow: 5px 5px 5px gray;
+}
+.service-box h1{
+    color: gold;
+    font-size: 15px;
+    text-align: center;
+   padding-top: 5px;
+}
+.service-box h4{
+    padding: 15px 3px;
+}
+.service-box div:hover{
+    transform: translateY(-7px);
+     box-shadow: 20px 20px 20px gray;
+}
+.contact{
+    
+    padding: 100px 8%;
+    display: flex;
+    align-items: center;
+    gap: 60px;
+
+
+}
+.contact .form{
+    width: 50%;
+
+}
+.section-title{
+    color: gold;
+}
+.contact .form h2{
+    font-size:40px;
+    margin: 15px 0;
+}
+.contact .form h2 span{
+    color: gold;
+}
+.contact .form .contact-description{
+    color: gray;
+    margin-bottom: 10px;
+}
+.contact form{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.contact input ,.contact textarea{
+    width: 100%;
+    padding: 15px;
+    font-size: 20px;
+    border: 1px solid gray;
+    border-radius: 10px;
+    transition: 0.4s;
+    outline: none;
+}
+.contact textarea{
+    resize: vertical;
+}
+.contact input:focus ,.contact textarea :focus
+{
+   border-color: gold;
+
+}
+#btn{
+    width: 200px;
+    background-color: black;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 20px;
+    transition: 0.3s;
+}
+#btn:hover{
+    background-color: gold;
+    color: black;
+    cursor: pointer;
+}
+.contact .photo{
+    width: 50%;
+}
+.contact .photo iframe{
+    width: 100%;
+    border-radius: 10px;
+    transition: 0.3s;
+    filter: grayscale(100%);
+}
+.contact .photo iframe:hover{
+    filter: grayscale(0);
+}
+footer{
+background-color: black;
+color: white;
+padding: 50px 20px;
+text-align: center;
+}
+footer h2,footer p{
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+footer h2 span{
+    color: gold;
+}
+.footer-link{
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 15px;
+    transition: 0.3s;
+}
+.footer-link a{
+    color: white;
+}
+.footer-link a:hover{
+    color: gold;
+}
+.copyright{
+    color: gray;
+    border-top: 1px solid gray;
+    padding: 15px;
+}
+@media (max-width:600px){
+  
+.nav h1{
+font-size: 20x;
+
+}
+
+.nav ul{
+display: flex;
+gap: 10px;
+
+font-size: 10px;
+
+}
+
+.nav ul li a:hover{
+    font-size: 15px;
+    color: gold;
+}
+
+
+
+
+
+
+.contact{
+    
+    padding: 100px 8%;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+
+}
+.contact .form{
+    width: 50%;
+
+}
+.section-title{
+    color: gold;
+}
+.contact .form h2{
+    font-size:40px;
+    margin: 15px 0;
+
+.contact .form .contact-description{
+    color: gray;
+    margin-bottom: 10px;
+}
+.contact form{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.contact input ,.contact textarea{
+    width: 100%;
+    padding: 15px;
+    font-size: 20px;
+    border: 1px solid gray;
+    border-radius: 10px;
+    transition: 0.4s;
+    outline: none;
+}
+.contact textarea{
+    resize: vertical;
+}
+.contact input:focus ,.contact textarea :focus
+{
+   border-color: gold;
+
+}
+#btn{
+    width: 200px;
+    background-color: black;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 20px;
+    transition: 0.3s;
+}
+#btn:hover{
+    background-color: gold;
+    color: black;
+    cursor: pointer;
+}
+.contact .photo{
+    width: 50%;
+}
+.contact .photo iframe{
+    width: 100%;
+    border-radius: 10px;
+    transition: 0.3s;
+    filter: grayscale(100%);
+}
+.contact .photo iframe:hover{
+    filter: grayscale(0);
+}
+footer{
+background-color: black;
+color: white;
+padding: 50px 20px;
+text-align: center;
+}
+footer h2,footer p{
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+footer h2 span{
+    color: gold;
+}
+.footer-link{
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 15px;
+    transition: 0.3s;
+}
+
+.footer-link:hover{
+    color: gold;
+}
+.copyright{
+    color: gray;
+    border-top: 1px solid gray;
+    padding: 15px;
+}
+
+}
